@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse Poll - Real-time Polling</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Login Screen -->
+        <div id="login-screen" class="screen active">
+            <div class="login-container">
+                <h1>Pulse Poll</h1>
+                <p>Enter your name to join</p>
+                <form id="login-form">
+                    <input type="text" id="username" placeholder="Your name" required>
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Waiting Room -->
+        <div id="waiting-room" class="screen">
+            <div class="waiting-container">
+                <h2>Waiting Room</h2>
+                <div class="waiting-list">
+                    <!-- Users will be added here -->
+                </div>
+                <div class="admin-controls">
+                    <button id="start-session" class="admin-only">Start Session</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Poll Screen -->
+        <div id="poll-screen" class="screen">
+            <div class="poll-container">
+                <div class="poll-header">
+                    <h2>Current Poll</h2>
+                    <div class="poll-timer">00:00</div>
+                </div>
+                <div class="poll-question">
+                    <!-- Poll question will be added here -->
+                </div>
+                <div class="poll-options">
+                    <!-- Poll options will be added here -->
+                </div>
+                <div class="voters-list">
+                    <!-- Voters will be added here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Admin Controls -->
+        <div id="admin-panel" class="admin-only">
+            <button id="create-poll">Create New Poll</button>
+            <button id="end-session">End Session</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
